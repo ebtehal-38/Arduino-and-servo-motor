@@ -5,8 +5,11 @@ The electronic circuit was designed to control the number of five servo motors a
 the circuit components are :
 
 power source 5V 
+
 arduino uno 
+
 5 servo motors
+
 Breadboard 
 
 
