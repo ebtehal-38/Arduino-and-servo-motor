@@ -1,0 +1,59 @@
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+Servo mydata;
+Servo mydb;
+Servo mypop;
+Servo mysos;
+
+
+
+int val;    // variable to read the value from the analog pin
+int val2;
+int val3;
+int val4;
+int val5;
+
+void setup() {
+  myservo.attach(9); 
+  mydata.attach(10);
+  mydb.attach(11);
+  mypop.attach(12);
+  mysos.attach(8);
+  
+ myservo.write(90);
+  mydata.write(90);
+  mydb.write(90);
+  mypop.write(90);
+  mysos.write(90);
+  delay(1000);
+}
+
+void loop() {
+  val = analogRead(5);            
+  val = map(val, 0, 1023, 0, 180);     
+  myservo.write(val);                  
+  delay(15);                          
+  
+  val2 = analogRead(4);            
+  val2 = map(val2, 0, 1023, 0, 180);     
+  mydata.write(val2);                  
+  delay(15);                           
+  
+  val3 = analogRead(3);            
+  val3 = map(val3, 0, 1023, 0, 180);     
+  mydb.write(val3);                  
+  delay(15);                           
+  
+  val4 = analogRead(2);            
+  val4 = map(val4, 0, 1023, 0, 180);     
+  mypop.write(val4);                  
+  delay(15);                           
+  
+  val5 = analogRead(1);            
+  val5 = map(val5, 0, 1023, 0, 180);     
+  mysos.write(val5);                  
+  delay(15);                           
+
+}
+
